@@ -1,0 +1,18 @@
+version: "3"
+services:
+  deardogbitdb:
+    image: deardogbit/db:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: xxxx
+    volumes:
+      #      -"logs:/logs"
+      - ./data:/var/lib/mysql
+      - ./my.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
+    ports:
+      - "6666:3306"
+    hostname: deardogbitdb
+    networks:
+      - dognet
+
+networks:
+  dognet:

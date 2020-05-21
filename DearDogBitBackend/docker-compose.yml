@@ -1,0 +1,19 @@
+version: "3"
+services:
+  deardogbitbackend:
+    image: deardogbit/backend:master
+    environment:
+      SERVER_PORT: 8888
+      DB_HOST: deardogbitdb
+      DB_PORT: 3306
+      DB_PW: xxxx
+    tty: true
+    ports:
+     - "8888:8888"
+#    networks:
+#      - dognet
+    hostname: deardogbitbackend
+
+
+#networks:
+#  dognet:
