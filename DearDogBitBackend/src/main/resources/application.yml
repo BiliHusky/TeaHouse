@@ -7,11 +7,11 @@ server:
   key-alias: 1
 
 spring:
-datasource:
-name: deadogbit
-url: jdbc:mysql://${DB_HOST}:${DB_PORT}/deardogbit?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&useSSL=false
-username: root
-password: ${DB_PW}
+  datasource:
+    name: deadogbit
+    url: jdbc:mysql://${DB_HOST}:${DB_PORT}/deardogbit?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&useSSL=false
+    username: root
+    password: ${DB_PW}
 
 mybatis:
-mapper-locations: classpath:mapping/*Mapper.xml
+  mapper-locations: classpath:mapping/*Mapper.xml
